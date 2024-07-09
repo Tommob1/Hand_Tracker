@@ -15,6 +15,8 @@ while True:
 		for hand_landmarks in results.multi_hand_landmarks:
 			mp_drawing.draw_landmarks(
 				image,
-				hand_landmarks,mphands.HAND_CONNECTIONS)
+				hand_landmarks,mphands.HAND_CONNECTIONS,
+				mp_drawing.DrawingSpec(color=(0, 0, 255), thickness=5, circle_radius=5),
+				mp_drawing.DrawingSpec(color=(0, 255, 0), thickness=5))
 	cv2.imshow('Handtracker', image)
 	cv2.waitKey(1)
